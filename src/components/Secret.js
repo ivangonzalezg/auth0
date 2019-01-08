@@ -10,6 +10,8 @@ export default class componentName extends Component {
                 <Form action="/">
                     <Button type="submit">Go home</Button>
                 </Form>
+                <br/>
+                <button onClick={this.props.auth.logout}>Logout</button>
             </div>
         )
     }

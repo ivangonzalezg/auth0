@@ -6,10 +6,14 @@ export default class componentName extends Component {
             <div>
                 Hello, {this.props.name}.
                 Do you want to see the secret area? <a href="/secret">Click here</a>
-                <hr/>
-                    Please login first.
-                <hr/>
-                <button onClick={this.props.auth.login} >Login</button>
+                {!this.props.auth.isAuthenticated() &&
+                    <div>
+                        <hr />
+                        Please login first.
+                        <hr />
+                        <button onClick={this.props.auth.login} >Login</button>
+                    </div>
+                }
             </div>
         )
     }

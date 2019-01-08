@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Main from'./components/Main';
 import Secret from './components/Secret';
-import NotFount from './components/NotFound'
-import Callback from './components/Callback'
+import NotFount from './components/NotFound';
+import Callback from './components/Callback';
 import './App.css';
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
         mainComponents = <Main {...this.props}/>;
         break;
       case "secret":
-        mainComponents = <Secret />;
+        mainComponents = this.props.auth.isAuthenticated() ? <Secret /> : <NotFount />;
         break;
       case "callback":
         mainComponents = <Callback />;

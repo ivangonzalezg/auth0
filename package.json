@@ -8,6 +8,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.3",
     "react": "^16.7.0",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
   },

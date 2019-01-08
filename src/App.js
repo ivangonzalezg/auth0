@@ -1,24 +1,33 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Main from'./components/Main';
+import Secret from './components/Secret';
+import NotFount from './components/NotFound'
+import Callback from './components/Callback'
 import './App.css';
 
 class App extends Component {
   render() {
+    let mainComponents = "";
+    switch(this.props.location) {
+      case "":
+        mainComponents = <Main {...this.props}/>;
+        break;
+      case "secret":
+        mainComponents = <Secret />;
+        break;
+      case "callback":
+        mainComponents = <Callback />;
+        break;
+      default: 
+        mainComponents = <NotFount />;
+    }
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p>Welcome to React, {this.props.name}</p>
+          {mainComponents}
         </header>
       </div>
     );

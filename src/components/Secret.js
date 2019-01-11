@@ -11,7 +11,7 @@ export default class componentName extends Component {
                     <Button type="submit">Go home</Button>
                 </Form>
                 <br/>
-                <button onClick={this.props.auth.logout}>Logout</button>
+                <Button onClick={this.props.auth.logout}>Logout</Button>
             </div>
         )
     }

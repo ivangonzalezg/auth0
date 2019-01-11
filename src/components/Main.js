@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button} from 'react-bootstrap'
 
 export default class componentName extends Component {
     render() {
@@ -11,7 +12,7 @@ export default class componentName extends Component {
                         <hr />
                         Please login first.
                         <hr />
-                        <button onClick={this.props.auth.login} >Login</button>
+                        <Button onClick={this.props.auth.login} >Login</Button>
                     </div>
                 }
             </div>
